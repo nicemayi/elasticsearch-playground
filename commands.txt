@@ -1,0 +1,6 @@
+curl -XPUT 127.0.0.1:9200/shakespeare --data-binary @shakes-mapping.json
+curl -XPOST 127.0.0.1:9200/shakespeare/_bulk --data-binary @shakespeare.json
+
+curl -XGET 127.0.0.1:9200/shakespeare/_search?pretty
+
+curl -XPUT 127.0.0.1:9200/_bulk?pretty --data-binary @movies.json
